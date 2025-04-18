@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .form-wrapper {
+            margin: 40px auto;
+            width: 50%;
+            border: 4px solid #0b4f7a;
+            background-color: #f8faff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-wrapper table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .form-wrapper th, .form-wrapper td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        .form-wrapper th {
+            background-color: #cce6ff;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 2px solid #0b4f7a;
+        }
+
+        .form-wrapper input[type="text"],
+        .form-wrapper select,
+        .form-wrapper textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-wrapper input[type="radio"],
+        .form-wrapper input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .form-wrapper textarea {
+            height: 80px;
+        }
+
+        .form-wrapper .submit-btn {
+            width: 100%;
+            background-color: #cce6f6;
+            color: #000;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .form-wrapper .submit-btn:hover {
+            background-color: #b3daf0;
+        }
+    </style>
+</head>
+<body>
+   <div align="center">
+    
+    <!-- Pang Invoice Table -->
+    <table style="border: 5px #304b78 solid; border-collapse: collapse; width: 55%">
+        <thead>
+            <th colspan="4" style="background-color: #6f8dc9; width: 1%; height: 45px; border-bottom: 10px #304b78 solid;">Invoice Tabular data</th>
+        </thead>
+        <thead style="background-color: #4e28b8; color: white">
+            <th colspan="1" style="border-right: 1px darkblue solid; border-bottom: 1px darkblue solid; text-align: left;">Invoice #123456789</th>
+            <th colspan="3" style="border-bottom: 1px darkblue solid; text-align: right;">14 January 2025</th>
+        </thead>
+        <tbody style="background-color: aquamarine;">
+            <tr>
+                <td colspan="2" style="border-right: 1px darkblue solid;"><b>Pay to:</b></td>
+                <td colspan="2"><b>Customer:</b></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-right: 1px darkblue solid;">Acme Biling Co.</td>
+                <td colspan="2">John Smith</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-right: 1px darkblue solid;">123 Main st</td>
+                <td colspan="2">321 Willow Way</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-right: 1px darkblue solid;">Cityville, NA 12345</td>
+                <td colspan="2">Southeast Northwestershire, MA 54321</td>
+            </tr>
+        </tbody>
+        <thead style="border: 1px darkblue solid; background-color: #4e28b8; color: white;">
+            <th>Name / Description</th>
+            <th>Qty.</th>
+            <th>@</th>
+            <th>Cost</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px darkblue solid;">Paperclips</td>
+                <td style="text-align: left; border: 1px darkblue solid;">1000</td>
+                <td style="text-align: center; border: 1px darkblue solid;">0.01</td>
+                <td style="text-align: right; border: 1px darkblue solid;">10.00</td>
+            </tr>
+            <tr>
+                <td style="border: 1px darkblue solid;">Staples (box)</td>
+                <td style="text-align: left; border: 1px darkblue solid;">100</td>
+                <td style="text-align: center; border: 1px darkblue solid;">1.00</td>
+                <td style="text-align: right; border: 1px darkblue solid;">100.00</td>
+            </tr>
+            <tr>
+                <td>Bond Paper (box)</td>
+                <td style="text-align: left; border: 1px darkblue solid;">100</td>
+                <td style="text-align: center; border: 1px darkblue solid;">1.00</td>
+                <td style="text-align: right; border: 1px darkblue solid;">110.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="border: 1px darkblue solid;"><b>Subtotal</b></td>
+                <td style="text-align: right; border: 1px darkblue solid;">110.00</td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>Tax</b></td>
+                <td style="border: 1px darkblue solid;">8%</td>
+                <td style="text-align: right;">8.80</td>
+            </tr>
+            <tfoot style="border: 1px darkblue solid ; background-color: #4e28b8; color: white">
+                <th colspan="2" style="text-align: left;">Grand Total</th>
+                <th colspan="2" style="text-align: right;">$ 118.80</th>
+            </tfoot>
+        </tbody>
+    </table>
+   </div>
+
+   <!-- Pang Form Section -->
+   <div class="form-wrapper">
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="Type your name here"></td>
+            </tr>
+            <tr>
+                <td>Sex:</td>
+                <td>
+                    <input type="radio" name="sex" value="male" checked> Male<br>
+                    <input type="radio" name="sex" value="female"> Female<br>
+                    <input type="radio" name="sex" value="other"> Other
+                </td>
+            </tr>
+            <tr>
+                <td>Eye Color</td>
+                <td>
+                    <select>
+                        <option>black</option>
+                        <option>blue</option>
+                        <option>brown</option>
+                        <option>green</option>
+                        <option>hazel</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Check all the Applies</td>
+                <td>
+                    <input type="checkbox"> Over 6ft. Tall<br>
+                    <input type="checkbox"> Over 200 pounds<br>
+                    <input type="checkbox"> Less than 200 pounds
+                </td>
+            </tr>
+            <tr>
+                <td>Describe your athletic ability</td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="submit-btn">Enter my Information</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
